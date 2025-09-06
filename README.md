@@ -23,7 +23,7 @@ After changing priority, I didnt notice much change... specifically because with
 
 However! Increasing the characters in the print function, caused a 20ms delay before the LED even began blinking. On subsequent prints, there was no issue, as the tasks are now running independently. It only mattered on startup, as the tasks are created serially.
 
-![alt text](<Screenshot 2025-09-06 022149-1.png>)
+![alt text](<Screenshot 2025-09-06 022149.png>)
 
 
 ## Q2. Increase Load:
@@ -32,7 +32,7 @@ Remove the vTaskDelay in the print task (making it a tight loop printing continu
 Describe the behavior you observed.
 
 ### Answer 2: 
-![alt text](<Screenshot 2025-09-06 022400-1.png>)
+![alt text](<Screenshot 2025-09-06 022400.png>)
 
 As you can see in the screenshot - there is only print timing logs being shown in the console. The LED did not blink even once, as the print task was hogging all the CPU.
 
