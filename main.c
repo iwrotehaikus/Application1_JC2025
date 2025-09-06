@@ -26,7 +26,7 @@ void beacon(void *pvParameters){
 void print_task(void *pvParameters){
     while(1){
         printf("Telemetry Responsive - System Status: Enjoying the Planetary View, Time=%lu ms\n", (unsigned long)(xTaskGetTickCount()*portTICK_PERIOD_MS)); 
-        //vTaskDelay(pdMS_TO_TICKS(10000));  // 10 seconds
+        vTaskDelay(pdMS_TO_TICKS(10000));  // 10 seconds
     }
 }
 
@@ -36,4 +36,5 @@ void app_main() {
     
     xTaskCreate(print_task, "PrintTask", 2048, NULL, 2, NULL); // begin BLINK & PRINT task simultaneously 
     xTaskCreate(beacon, "BeaconTask", 2048, NULL, 1, NULL);
+
 }
