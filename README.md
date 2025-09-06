@@ -7,6 +7,11 @@ John Crawford
 
 Context: Space Station / Satellite Beacon
 
+# Set Up & Environment
+
+I used the VSCode method presented in the videos with the internal Wokwi Simulation.
+
+![alt text](<Screenshot 2025-09-06 031331.png>)
 
 # Analysis & Exploration
 
