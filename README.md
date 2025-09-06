@@ -1,6 +1,8 @@
 # Application1_JC2025
 Real Time Systems Application 1
+
 John Crawford
+
 5286620
 
 Context: Space Station / Satellite Beacon
