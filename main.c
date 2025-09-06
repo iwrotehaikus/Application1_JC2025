@@ -34,7 +34,8 @@ void app_main() {
     gpio_reset_pin(LED_PIN);  //set GPIO for LED - used define earlier so we can use any pin without having to hardcode everywhere
     gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT); // LED GPIO Pin is an output not an input 
     
-    xTaskCreate(print_task, "PrintTask", 2048, NULL, 2, NULL); // begin BLINK & PRINT task simultaneously 
+    xTaskCreate(print_task, "PrintTask", 2048, NULL, 1, NULL); // begin BLINK & PRINT task simultaneously 
     xTaskCreate(beacon, "BeaconTask", 2048, NULL, 1, NULL);
 
 }
+
